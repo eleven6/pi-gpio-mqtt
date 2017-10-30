@@ -1,4 +1,5 @@
 # Very basic quide how to get MQTT up and running
+# Good explaination of MQTT concept https://www.youtube.com/watch?v=EIxdz-2rhLs
 
 # Raspi install MQTT Broker & Client (Mosquitto)
 sudo apt-get install -y mosquitto mosquitto-clients
@@ -10,3 +11,13 @@ mosquitto_sub -h localhost -v -t test
 # second console, type the following command to test if publishing messages is working 
 # and received on the subscriber side (first console)
 mosquitto_pub -h localhost -t test -m "Hello Mosquitto"
+
+# for use with python install paho-mqtt libraries
+
+# python 2.x
+pip install paho-mqtt
+
+# python 3.x
+pip3 install paho-mqtt
+
+
