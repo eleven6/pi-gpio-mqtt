@@ -1,0 +1,12 @@
+# Very basic quide how to get MQTT up and running
+
+# Raspi install MQTT Broker & Client (Mosquitto)
+sudo apt-get install -y mosquitto mosquitto-clients
+
+# subsscripe to -h(ost) localhsot -v(erbose) -t(opic) test 
+# Mosquitto_Client is now listening to all messages on channel test
+mosquitto_sub -h localhost -v -t test
+
+# second console, type the following command to test if publishing messages is working 
+# and received on the subscriber side (first console)
+mosquitto_pub -h localhost -t test -m "Hello Mosquitto"
